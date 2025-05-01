@@ -60,6 +60,9 @@ vim.o.signcolumn = "yes"
 -- Draw relative number column first and then signcolumn
 vim.o.statuscolumn = "%=%{v:relnum?v:relnum:v:lnum}%s"
 
+-- Show statusline only in last window
+vim.o.laststatus = 3
+
 -- Configure how new splits would be opened
 vim.o.splitright = true
 vim.o.splitbelow = true
