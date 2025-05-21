@@ -7,7 +7,7 @@ all: uninstall
 
 install: install-prerequisites install-prettier install-cargo install-bat install-tokei install-fdfind install-kitty install-nvim install-tmux install-tmux-tpm install-fzf install-oh-my-zsh install-powerlevel10k install-oh-my-zsh-plugins
 
-install-macos: install-prerequisites-macos install-prettier install-cargo install-bat install-tokei install-fdfind install-nvim-brew install-tmux-brew install-tmux-tpm install-fzf-brew install-oh-my-zsh install-powerlevel10k install-oh-my-zsh-plugins
+install-macos: install-prerequisites-macos install-delta-brew install-prettier install-cargo install-bat install-tokei install-fdfind install-nvim-brew install-tmux-brew install-tmux-tpm install-fzf-brew install-oh-my-zsh install-powerlevel10k install-oh-my-zsh-plugins
 
 install-configs:
 	./installer.sh
@@ -25,6 +25,9 @@ install-prettier:
 
 install-fdfind:
 	@cargo install fd-find
+
+install-delta-brew:
+	brew install git-delta
 
 install-delta:
 	@sudo snap install git-delta-snap
