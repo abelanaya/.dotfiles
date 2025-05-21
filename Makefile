@@ -25,7 +25,7 @@ install-prettier:
 install-fdfind:
 	@cargo install fd-find
 
-install-delta
+install-delta:
 	@sudo snap install git-delta-snap
 
 install-nitrogen:
