@@ -12,9 +12,8 @@ alias v='nvim'
 # Source Cargo env if it exists
 [[ -f $HOME/.cargo/env ]] && source $HOME/.cargo/env
 
-# Get fzf keybindings
-source /usr/share/doc/fzf/examples/key-bindings.zsh
-source /usr/share/doc/fzf/examples/completion.zsh
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
 
 # Use these sources if installed with clone
 #source ~/.fzf/shell/key-bindings.zsh
