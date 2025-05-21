@@ -93,11 +93,10 @@ install-kitty:
 	sudo sed -i "s|Exec=kitty|Exec=/home/$$USER/.local/kitty.app/bin/kitty|g" /usr/share/applications/kitty*.desktop
 
 install-nodejs:
-	@curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | zsh
+	@mkdir -p ~/.nvm
+	@curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 	@nvm install --lts
 	@nvm use --lts
-	@sudo apt-get purge nodejs
-	@sudo apt-get autoremove
 
 install-powerlevel10k:
 	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM}/themes/powerlevel10k
