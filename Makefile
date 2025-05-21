@@ -13,7 +13,7 @@ install-configs:
 	./installer.sh
 
 install-prerequisites-macos:
-	brew install libtool pkg-config automake ripgrep python3 xclip npm nmap dnsmap gucharmap tree stow wget ninja cmake gettext curl gh
+	brew install libtool pkg-config automake ripgrep python3 xclip npm nmap dnsmap gucharmap tree stow wget ninja cmake gettext curl gh zoxide
 	brew install --cask raycast ghostty scroll-reverser
 
 install-prerequisites:
