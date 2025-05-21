@@ -39,6 +39,9 @@ install-polybar:
 	@sudo apt install build-essential git cmake cmake-data pkg-config python3-sphinx python3-packaging libuv1-dev libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev python3-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev libcurl4-openssl-dev libmpdclient-dev libiw-dev libpulse-dev libjsoncpp-dev libnl-genl-3-dev libcurlpp-dev libxcb-image0-dev libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev wireless-tools
 	@git clone https://github.com/polybar/polybar.git ~/polybar
 
+install-fonts-macos:
+	cp ~/.dotfiles/fonts/.fonts/* ~/Library/Fonts/
+
 install-fonts:
 	@fc-cache -fv
 
