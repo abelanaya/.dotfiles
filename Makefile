@@ -57,6 +57,7 @@ install-oh-my-zsh-plugins:
 install-oh-my-zsh:
 	wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 	sh install.sh
+	rm install.sh
 
 install-rofi-theme-selector:
 	@git clone https://github.com/lr-tech/rofi-themes-collection.git
