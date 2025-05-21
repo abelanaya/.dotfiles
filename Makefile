@@ -3,7 +3,7 @@ ZSH_CUSTOM = ${HOME}/.oh-my-zsh/custom
 
 default: all
 
-all: uninstall move
+all: uninstall
 
 install: install-prerequisites install-prettier install-cargo install-bat install-tokei install-fdfind install-kitty install-nvim install-tmux install-tmux-tpm install-fzf install-oh-my-zsh install-powerlevel10k install-oh-my-zsh-plugins
 
@@ -13,7 +13,8 @@ install-configs:
 	./installer.sh
 
 install-prerequisites-macos:
-	brew install automake ripgrep python3 xclip npm nmap dnsmap gucharmap tree stow wget
+	brew install libtool pkg-config automake ripgrep python3 xclip npm nmap dnsmap gucharmap tree stow wget ninja cmake gettext curl
+	brew install --cask raycast ghostty scroll-reverser
 
 install-prerequisites:
 	@sudo apt-get install -y autotools-dev automake zsh ripgrep xclip python3 pip flameshot curl npm fuse pavucontrol net-tools network-manager network-manager-gnome xbacklight arandr gucharmap pulseaudio-utils tree stow
