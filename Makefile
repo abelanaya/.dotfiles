@@ -7,8 +7,13 @@ all: uninstall move
 
 install: install-prerequisites install-prettier install-cargo install-bat install-tokei install-fdfind install-kitty install-nvim install-tmux install-tmux-tpm install-fzf install-oh-my-zsh install-powerlevel10k install-oh-my-zsh-plugins
 
+install-macos: install-prerequisites-macos install-prettier install-cargo install-bat install-tokei install-fdfind install-nvim-brew install-tmux-brew install-tmux-tpm install-fzf-brew install-oh-my-zsh install-powerlevel10k install-oh-my-zsh-plugins
+
 install-configs:
 	./installer.sh
+
+install-prerequisites-macos:
+	brew install automake ripgrep python3 xclip npm nmap dnsmap gucharmap tree stow wget
 
 install-prerequisites:
 	@sudo apt-get install -y autotools-dev automake zsh ripgrep xclip python3 pip flameshot curl npm fuse pavucontrol net-tools network-manager network-manager-gnome xbacklight arandr gucharmap pulseaudio-utils tree stow
@@ -39,6 +44,9 @@ install-fzf-clone:
 
 install-fzf:
 	@sudo apt-get install fzf -y
+
+install-fzf-brew:
+	brew install fzf
 
 install-oh-my-zsh-plugins:
 	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM}/plugins/zsh-autosuggestions
@@ -92,12 +100,18 @@ install-nodejs:
 install-powerlevel10k:
 	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM}/themes/powerlevel10k
 
+install-nvim-brew:
+	brew install nvim
+
 install-nvim:
 	curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 	@sudo chmod u+x nvim.appimage
 	@sudo mv nvim.appimage /usr/bin/nvim
 	@sudo chown root:root /usr/bin/nvim
 	@sudo chmod 755 /usr/bin/nvim
+
+install-tmux-brew:
+	brew install tmux
 
 install-tmux:
 	@sudo apt-get install tmux
