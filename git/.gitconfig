@@ -10,6 +10,7 @@
     helper = !/usr/bin/gh auth git-credential
 [core]
     pager = delta
+    editor = nvim
 [interactive]
     diffFilter = delta --color-only
 [include]
