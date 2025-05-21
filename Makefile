@@ -5,7 +5,7 @@ default: all
 
 all: uninstall move
 
-install: install-prerequisites install-prettier install-cargo install-bat install-tokei install-fdfind install-kitty install-nvim install-tmux install-tmux-tpm install-fzf install-oh-my-zsh install-powerlevel10k install-oh-my-zsh-plugins install-git-alias
+install: install-prerequisites install-prettier install-cargo install-bat install-tokei install-fdfind install-kitty install-nvim install-tmux install-tmux-tpm install-fzf install-oh-my-zsh install-powerlevel10k install-oh-my-zsh-plugins
 
 install-configs:
 	./installer.sh
@@ -108,9 +108,6 @@ install-tmux:
 
 install-tmux-tpm:
 	@git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-install-git-alias:
-	@./scripts/.local/scripts/git_alias.sh
 
 uninstall:
 	@./clean-env.sh
