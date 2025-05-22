@@ -1,7 +1,9 @@
 theme = OneHalfDark
+palette = 8=#777777
+cursor-color =
+cursor-text =
 background-opacity = 0.95
 bold-is-bright = true
-focus-follows-mouse = true
 font-thicken = true
 # font-family = DejaVu Sans Code
 font-family = JetBrainsMono Nerd Font Mono
