@@ -1,0 +1,9 @@
+theme = OneHalfDark
+background-opacity = 0.95
+bold-is-bright = true
+focus-follows-mouse = true
+font-thicken = true
+# font-family = DejaVu Sans Code
+font-family = JetBrainsMono Nerd Font Mono
+font-size = 14
+window-inherit-font-size = false
