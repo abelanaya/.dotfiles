@@ -14,7 +14,7 @@ install-configs:
 
 install-prerequisites-macos:
 	brew install libtool pkg-config automake ripgrep python3 xclip npm nmap dnsmap gucharmap tree stow wget ninja cmake gettext curl gh zoxide tldr
-	brew install --cask raycast ghostty scroll-reverser
+	brew install --cask raycast ghostty scroll-reverser karabiner-elements
 
 install-prerequisites:
 	@sudo apt-get install -y autotools-dev automake zsh ripgrep xclip python3 pip flameshot curl npm fuse pavucontrol net-tools network-manager network-manager-gnome xbacklight arandr gucharmap pulseaudio-utils tree stow
