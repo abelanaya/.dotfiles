@@ -4,6 +4,189 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Ctrl+'0' => Cmd+'0' (Reset zoom)",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.macports\\.X11$",
+                                            "^co\\.zeit\\.hyper$",
+                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^tv\\.parsec\\.www$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "0",
+                                    "modifiers": {
+                                        "mandatory": ["control"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "0",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.macports\\.X11$",
+                                            "^co\\.zeit\\.hyper$",
+                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^tv\\.parsec\\.www$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "keypad_0",
+                                    "modifiers": {
+                                        "mandatory": ["control"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "keypad_0",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Ctrl+'-' => Cmd+'-' (Zoom out)",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.macports\\.X11$",
+                                            "^co\\.zeit\\.hyper$",
+                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^tv\\.parsec\\.www$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "slash",
+                                    "modifiers": {
+                                        "mandatory": ["control"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "slash",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.macports\\.X11$",
+                                            "^co\\.zeit\\.hyper$",
+                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^tv\\.parsec\\.www$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "keypad_hyphen",
+                                    "modifiers": {
+                                        "mandatory": ["control"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "keypad_hyphen",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Ctrl+'+' => Cmd+'+' (Zoom in)",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.macports\\.X11$",
+                                            "^co\\.zeit\\.hyper$",
+                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^tv\\.parsec\\.www$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "close_bracket",
+                                    "modifiers": {
+                                        "mandatory": ["control"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "close_bracket",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.macports\\.X11$",
+                                            "^co\\.zeit\\.hyper$",
+                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^tv\\.parsec\\.www$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "keypad_plus",
+                                    "modifiers": {
+                                        "mandatory": ["control"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "keypad_plus",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Ctrl+C, Ctrl+V, Ctrl+X => Cmd+C (Copy), Cmd+V (Paste), Cmd+X (Cut)",
                         "manipulators": [
                             {
@@ -182,9 +365,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "input_sources": [
-                                            { "language": "^de$" }
-                                        ],
+                                        "input_sources": [{ "language": "^de$" }],
                                         "type": "input_source_if"
                                     },
                                     {
@@ -244,9 +425,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "input_sources": [
-                                            { "language": "^de$" }
-                                        ],
+                                        "input_sources": [{ "language": "^de$" }],
                                         "type": "input_source_unless"
                                     },
                                     {
@@ -311,9 +490,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "input_sources": [
-                                            { "language": "^de$" }
-                                        ],
+                                        "input_sources": [{ "language": "^de$" }],
                                         "type": "input_source_if"
                                     },
                                     {
@@ -365,10 +542,7 @@
                                 "to": [
                                     {
                                         "key_code": "y",
-                                        "modifiers": [
-                                            "left_command",
-                                            "left_shift"
-                                        ]
+                                        "modifiers": ["left_command", "left_shift"]
                                     }
                                 ],
                                 "type": "basic"
@@ -376,9 +550,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "input_sources": [
-                                            { "language": "^de$" }
-                                        ],
+                                        "input_sources": [{ "language": "^de$" }],
                                         "type": "input_source_unless"
                                     },
                                     {
@@ -430,10 +602,7 @@
                                 "to": [
                                     {
                                         "key_code": "z",
-                                        "modifiers": [
-                                            "left_command",
-                                            "left_shift"
-                                        ]
+                                        "modifiers": ["left_command", "left_shift"]
                                     }
                                 ],
                                 "type": "basic"
@@ -1310,10 +1479,7 @@
                                 "to": [
                                     {
                                         "key_code": "tab",
-                                        "modifiers": [
-                                            "left_command",
-                                            "left_shift"
-                                        ]
+                                        "modifiers": ["left_command", "left_shift"]
                                     }
                                 ],
                                 "type": "basic"
@@ -1334,10 +1500,7 @@
                                 "to": [
                                     {
                                         "key_code": "0",
-                                        "modifiers": [
-                                            "left_command",
-                                            "left_option"
-                                        ]
+                                        "modifiers": ["left_command", "left_option"]
                                     }
                                 ],
                                 "type": "basic"
@@ -1580,11 +1743,7 @@
                                         "optional": ["any"]
                                     }
                                 },
-                                "to": [
-                                    {
-                                        "shell_command": "/System/Library/CoreServices/Menu\\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-                                    }
-                                ],
+                                "to": [{ "shell_command": "/System/Library/CoreServices/Menu\\ Extras/User.menu/Contents/Resources/CGSession -suspend" }],
                                 "type": "basic"
                             }
                         ]
@@ -1675,15 +1834,9 @@
                                 ],
                                 "from": {
                                     "key_code": "escape",
-                                    "modifiers": {
-                                        "mandatory": ["control", "shift"]
-                                    }
+                                    "modifiers": { "mandatory": ["control", "shift"] }
                                 },
-                                "to": [
-                                    {
-                                        "shell_command": "open -a 'Activity Monitor.app'"
-                                    }
-                                ],
+                                "to": [{ "shell_command": "open -a 'Activity Monitor.app'" }],
                                 "type": "basic"
                             }
                         ]
@@ -1813,11 +1966,7 @@
                                 "to": [
                                     {
                                         "key_code": "left_shift",
-                                        "modifiers": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ]
+                                        "modifiers": ["left_command", "left_control", "left_option"]
                                     }
                                 ],
                                 "type": "basic"
@@ -1840,9 +1989,7 @@
                     "identifiers": { "is_keyboard": true },
                     "simple_modifications": [
                         {
-                            "from": {
-                                "apple_vendor_top_case_key_code": "keyboard_fn"
-                            },
+                            "from": { "apple_vendor_top_case_key_code": "keyboard_fn" },
                             "to": [{ "key_code": "left_control" }]
                         },
                         {
