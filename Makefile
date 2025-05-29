@@ -17,7 +17,7 @@ install-prerequisites-macos:
 	brew install --cask raycast ghostty scroll-reverser karabiner-elements
 
 install-prerequisites:
-	@sudo apt-get install -y autotools-dev automake zsh ripgrep xclip python3 pip flameshot curl npm fuse pavucontrol net-tools network-manager network-manager-gnome xbacklight arandr gucharmap pulseaudio-utils tree stow
+	@sudo apt-get install -y autotools-dev cmake automake bear zsh ripgrep xclip python3 pip flameshot curl npm fuse pavucontrol net-tools network-manager network-manager-gnome xbacklight arandr gucharmap pulseaudio-utils tree stow
 	@pip3 install virtualenv
 
 install-prettier:
