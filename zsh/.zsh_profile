@@ -39,7 +39,7 @@ fi
 eval "$(gh copilot alias -- zsh)"
 
 if [[ -z $STOW_FOLDERS ]]; then
-    export STOW_FOLDERS="git,i3,nvim,tmux,zsh,rofi,kitty,dunst,scripts,polybar,Xresources,Gtkrc,fonts,neofetch,prettier,ghostty,karabiner"
+    export STOW_FOLDERS="git,i3,nvim,tmux,zsh,rofi,kitty,dunst,scripts,polybar,Xresources,Gtkrc,fonts,neofetch,prettier,ghostty,karabiner,aerospace"
 fi
 
 if [[ -z $DOTFILES ]]; then
