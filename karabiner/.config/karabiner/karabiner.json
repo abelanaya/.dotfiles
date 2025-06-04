@@ -1226,7 +1226,8 @@
                                             "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^tv\\.parsec\\.www$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.mitchellh\\.ghostty$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -1236,6 +1237,24 @@
                                     {
                                         "key_code": "left_arrow",
                                         "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.mitchellh\\.ghostty$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": { "key_code": "home" },
+                                "to": [
+                                    {
+                                        "key_code": "a",
+                                        "modifiers": ["option"]
                                     }
                                 ],
                                 "type": "basic"
@@ -1256,7 +1275,8 @@
                                             "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^tv\\.parsec\\.www$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.mitchellh\\.ghostty$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -1269,6 +1289,24 @@
                                     {
                                         "key_code": "left_arrow",
                                         "modifiers": ["command", "shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.mitchellh\\.ghostty$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": { "key_code": "home" },
+                                "to": [
+                                    {
+                                        "key_code": "a",
+                                        "modifiers": ["option"]
                                     }
                                 ],
                                 "type": "basic"
@@ -1289,7 +1327,8 @@
                                             "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^tv\\.parsec\\.www$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.mitchellh\\.ghostty$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -1305,6 +1344,24 @@
                                     {
                                         "key_code": "up_arrow",
                                         "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.mitchellh\\.ghostty$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": { "key_code": "home" },
+                                "to": [
+                                    {
+                                        "key_code": "a",
+                                        "modifiers": ["option"]
                                     }
                                 ],
                                 "type": "basic"

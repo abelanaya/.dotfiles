@@ -12,3 +12,4 @@ window-inherit-font-size = false
 
 # Bind ALT + d to delete forward word
 keybind = alt+d=text:\x1b\x64
+keybind = alt+a=text:\x1b\x5b\x31\x7e
