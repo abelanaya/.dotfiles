@@ -98,18 +98,24 @@ automatically-unhide-macos-hidden-apps = false
     # '''
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
-    cmd-shift-slash = 'layout tiles horizontal vertical'
+    cmd-slash = 'layout tiles horizontal vertical'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
     cmd-h = 'focus left'
     cmd-j = 'focus down'
-    cmd-k = 'focus up'
+    # Possible conflict with Notion and other apps that use cmd-k for openning command palette. With cmd-alt-k there is
+    # no conflict. cmd-k has been remapped to cmd-alt-k in karabiner-elements and ctrl-k to cmd-k so we can use cmd-k
+    # for focus up and ctrl-k for command palette
+    cmd-alt-k = 'focus up'
     cmd-l = 'focus right'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move
     cmd-shift-h = 'move left'
     cmd-shift-j = 'move down'
-    cmd-shift-k = 'move up'
+    # Possible conflict with Notion and other apps that use cmd-k for openning command palette. With cmd-alt-k there is
+    # no conflict. cmd-k has been remapped to cmd-alt-k in karabiner-elements and ctrl-k to cmd-k so we can use cmd-k
+    # for focus up and ctrl-k for command palette
+    cmd-alt-shift-k = 'move up'
     cmd-shift-l = 'move right'
 
     cmd-shift-r = 'mode resize'
@@ -143,7 +149,9 @@ automatically-unhide-macos-hidden-apps = false
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     cmd-tab = 'workspace-back-and-forth'
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
+    # Conflict with print command. For now remains conflicted, not really important
     cmd-p = 'move-workspace-to-monitor --wrap-around next'
+    # Conflict with show/hide preview pane in finder command. For now remains conflicted, not really important
     cmd-shift-p = [
         'move-node-to-monitor --wrap-around next',
         'focus-monitor next --wrap-around'
