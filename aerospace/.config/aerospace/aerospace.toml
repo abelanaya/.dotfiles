@@ -14,10 +14,6 @@ after-startup-command = []
 # Start AeroSpace at login
 start-at-login = true
 
-# Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
-enable-normalization-flatten-containers = false
-enable-normalization-opposite-orientation-for-nested-containers = false
-
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 # The 'accordion-padding' specifies the size of accordion padding
 # You can set 0 to disable the padding feature
@@ -92,24 +88,28 @@ automatically-unhide-macos-hidden-apps = false
     # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
     # You can uncomment the following lines to open up terminal with cmd + enter shortcut
     # (like in i3)
+    # Not working for Ghostty
     # cmd-enter = '''exec-and-forget osascript -e '
-    # tell application "Terminal"
+    # tell application "Ghostty"
     #     do script
     #     activate
     # end tell'
     # '''
 
+    # Disable hide others command
+    cmd-alt-h = []
+
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
     cmd-slash = 'layout tiles horizontal vertical'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-    cmd-h = 'focus left'
-    cmd-j = 'focus down'
+    cmd-h = 'focus --boundaries-action wrap-around-the-workspace left'
+    cmd-j = 'focus --boundaries-action wrap-around-the-workspace down'
     # Possible conflict with Notion and other apps that use cmd-k for openning command palette. With cmd-alt-k there is
     # no conflict. cmd-k has been remapped to cmd-alt-k in karabiner-elements and ctrl-k to cmd-k so we can use cmd-k
     # for focus up and ctrl-k for command palette
-    cmd-alt-k = 'focus up'
-    cmd-l = 'focus right'
+    cmd-alt-k = 'focus --boundaries-action wrap-around-the-workspace up'
+    cmd-l = 'focus --boundaries-action wrap-around-the-workspace right'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move
     cmd-shift-h = 'move left'
@@ -194,3 +194,21 @@ automatically-unhide-macos-hidden-apps = false
     enter = [
       'mode main',
     ]
+
+# Move apps directly to specific workspaces
+[[on-window-detected]]
+    if.app-id = 'com.google.Chrome'
+    run = ['move-node-to-workspace 1']
+
+[[on-window-detected]]
+    if.app-id = 'com.mitchellh.ghostty'
+    run = ['move-node-to-workspace 2']
+
+[[on-window-detected]]
+    if.app-id = 'notion.id'
+    run = ['move-node-to-workspace 3']
+
+# Configuration to apply via commands one time for aerospace to work
+# defaults write -g NSWindowShouldDragOnGesture -bool true
+# defaults write com.apple.spaces spans-displays -bool true && killall SystemUIServer
+# defaults write com.apple.dock expose-group-apps -bool true && killall Dock
