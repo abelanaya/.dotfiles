@@ -1738,7 +1738,8 @@
                                             "^org\\.alacritty$",
                                             "^net\\.kovidgoyal\\.kitty$",
                                             "^com\\.github\\.wez\\.wezterm$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.mitchellh\\.ghostty$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -1794,7 +1795,8 @@
                                             "^org\\.alacritty$",
                                             "^net\\.kovidgoyal\\.kitty$",
                                             "^com\\.github\\.wez\\.wezterm$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.mitchellh\\.ghostty$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -1810,6 +1812,48 @@
                                     {
                                         "key_code": "right_arrow",
                                         "modifiers": ["left_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.mitchellh\\.ghostty$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "left_arrow",
+                                    "modifiers": { "mandatory": ["control"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.mitchellh\\.ghostty$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_arrow",
+                                    "modifiers": { "mandatory": ["control"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": ["command"]
                                     }
                                 ],
                                 "type": "basic"
