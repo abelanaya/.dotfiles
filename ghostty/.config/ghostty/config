@@ -10,6 +10,7 @@ font-family = DejaVu Sans Code
 font-family = Symbols Nerd Font Mono
 font-size = 14
 window-inherit-font-size = false
+mouse-hide-while-typing = true
 
 # Bind ALT + d to delete forward word
 keybind = alt+d=text:\x1b\x64
