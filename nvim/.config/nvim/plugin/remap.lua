@@ -85,3 +85,10 @@ vim.keymap.set(
     ":let @+=expand('%') .. ':' .. line('.')<cr>",
     { desc = "Copy current file name and line number to clipboard" }
 )
+
+-- Use M (Move cursor to middle screen as screen center)
+vim.keymap.set("n", "M", "zz")
+
+-- Map B and E to go to beginning and end of line without taking whitespace into account
+vim.keymap.set("n", "B", "^")
+vim.keymap.set("n", "E", "$")
