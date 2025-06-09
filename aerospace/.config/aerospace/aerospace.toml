@@ -88,13 +88,7 @@ automatically-unhide-macos-hidden-apps = false
     # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
     # You can uncomment the following lines to open up terminal with cmd + enter shortcut
     # (like in i3)
-    # Not working for Ghostty
-    # cmd-enter = '''exec-and-forget osascript -e '
-    # tell application "Ghostty"
-    #     do script
-    #     activate
-    # end tell'
-    # '''
+    cmd-enter = 'exec-and-forget open -n /Applications/Ghostty.app'
 
     # Disable hide others command
     cmd-alt-h = []
@@ -210,5 +204,4 @@ automatically-unhide-macos-hidden-apps = false
 
 # Configuration to apply via commands one time for aerospace to work
 # defaults write -g NSWindowShouldDragOnGesture -bool true
-# defaults write com.apple.spaces spans-displays -bool true && killall SystemUIServer
 # defaults write com.apple.dock expose-group-apps -bool true && killall Dock
