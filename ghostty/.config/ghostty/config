@@ -21,3 +21,16 @@ keybind = global:cmd+ñ=toggle_quick_terminal
 # Bind COMMAND + left/right to move cursor by word. This is remapped to CTRL + left/right in karabiner-elements
 keybind = command+left=text:\x1b\x5b\x31\x3b\x35\x44
 keybind = command+right=text:\x1b\x5b\x31\x3b\x35\x43
+
+# Bind ALT + some letters to allow keybinds of ALT in nvim work
+keybind = alt+q=text:\x1b\x71
+keybind = alt+w=text:\x1b\x77
+keybind = alt+e=text:\x1b\x65
+keybind = alt+r=text:\x1b\x72
+keybind = alt+n=text:\x1b\x6e
+keybind = alt+p=text:\x1b\x70
+keybind = alt+h=text:\x1b\x68
+keybind = alt+j=text:\x1b\x6a
+keybind = alt+k=text:\x1b\x6b
+keybind = alt+l=text:\x1b\x6c
+keybind = alt+v=text:\x1b\x76
