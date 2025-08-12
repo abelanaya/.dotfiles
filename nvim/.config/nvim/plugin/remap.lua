@@ -11,6 +11,9 @@ vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Keep cursor at current position when moving next line to current line
 vim.keymap.set("n", "J", "mzJ`z")
 
+-- Map jk in normal mode to ESC
+vim.keymap.set("i", "jk", "<esc>")
+
 -- This is going to get me cancelled. Only difference for now between ESC and C-c is for block editring
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
