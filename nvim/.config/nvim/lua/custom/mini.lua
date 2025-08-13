@@ -26,19 +26,6 @@ return {
         -- Mini comment plugin
         require("mini.comment").setup()
 
-        -- Improve f and t commands by allowing to jump also between lines
-        require("mini.jump").setup()
-
-        -- Add 2D jump motions. Enables moving cursor interactively based in encoded chars. Enter 2D jump mode by
-        -- pressing <CR>
-        require("mini.jump2d").setup({
-            labels = "abcdefghijklopqrstuvwxyz",
-        })
-
-        -- Remap jump2d highlighting. I enjoyed these two. Pink is less intrusive imo
-        vim.cmd([[ hi MiniJump2dSpot guibg=None guifg=#ff007c ]])
-        -- vim.cmd([[ hi MiniJump2dSpot guibg=None guifg=#03dfff ]])
-
         -- Add move of objects visually selected in visual mode. Move with Shift + <h,j,k,l>
         require("mini.move").setup({
             mappings = {
