@@ -7,14 +7,6 @@ return {
 
         "hrsh7th/cmp-nvim-lsp",
         { "antosha417/nvim-lsp-file-operations", config = true },
-
-        -- Additional lua configuration, makes nvim stuff amazing!
-        {
-            "folke/neodev.nvim",
-            config = function()
-                require("neodev").setup()
-            end,
-        },
     },
 
     config = function()
@@ -187,26 +179,6 @@ return {
                     require("lspconfig")[server_name].setup({
                         capabilities = capabilities,
                         on_attach = on_attach,
-                    })
-                end,
-
-                ["lua_ls"] = function()
-                    lspconfig.lua_ls.setup({
-                        capabilities = capabilities,
-                        on_attach = on_attach,
-                        settings = { -- custom settings for lua
-                            Lua = {
-                                -- make the language server recognize "vim" global
-                                diagnostics = { globals = { "vim" } },
-                                workspace = {
-                                    -- make language server aware of runtime files
-                                    library = {
-                                        [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-                                        [vim.fn.stdpath("config") .. "/lua"] = true,
-                                    },
-                                },
-                            },
-                        },
                     })
                 end,
             },

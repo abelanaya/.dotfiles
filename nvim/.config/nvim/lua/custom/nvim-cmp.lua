@@ -17,6 +17,9 @@ return {
 
         -- Adds a number of user-friendly snippets
         "rafamadriz/friendly-snippets",
+
+        -- Lua completion
+        { "folke/lazydev.nvim", opts = {} },
     },
     config = function()
         local cmp = require("cmp")
