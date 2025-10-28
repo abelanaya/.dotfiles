@@ -1,9 +1,40 @@
 return {
     "neovim/nvim-lspconfig",
     dependencies = {
-        "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim",
-        "WhoIsSethDaniel/mason-tool-installer.nvim",
+        {
+            "williamboman/mason.nvim",
+            opts = {
+                ui = {
+                    icons = {
+                        package_installed = "✓",
+                        package_pending = "➜",
+                        package_uninstalled = "✗",
+                    },
+                },
+            },
+        },
+        {
+            "williamboman/mason-lspconfig.nvim",
+        },
+        {
+            "WhoIsSethDaniel/mason-tool-installer.nvim",
+            opts = {
+                -- Add only tools you want installed system wide and not per project
+                ensure_installed = {
+                    "prettierd", -- prettierd increases prettier speed
+                    "prettier", -- prettier formatter
+                    "pydocstyle", -- python doc linter
+                    "pylint", -- python linter
+                    "isort", -- python formatter to sort imports alphabetically
+                    "black", -- python formatter
+                    "mypy", -- python linter
+                    "stylua", -- lua formatter
+                    "clang-format", -- c/c++ formatter
+                    "cpplint", -- cpp linter
+                    "markdownlint", -- markdown linter
+                },
+            },
+        },
 
         "hrsh7th/cmp-nvim-lsp",
         { "antosha417/nvim-lsp-file-operations", config = true },
@@ -11,50 +42,7 @@ return {
 
     config = function()
         -- Mason configuration
-        local mason = require("mason")
         local mason_lspconfig = require("mason-lspconfig")
-        local mason_tool_installer = require("mason-tool-installer")
-
-        -- enable mason and configure icons
-        mason.setup({
-            ui = {
-                icons = {
-                    package_installed = "✓",
-                    package_pending = "➜",
-                    package_uninstalled = "✗",
-                },
-            },
-        })
-
-        mason_tool_installer.setup({
-            -- Add only tools you want installed system wide and not per project
-            ensure_installed = {
-                "bashls",
-                "clangd",
-                "cssls",
-                "html",
-                "lua_ls",
-                "eslint",
-                "prettierd", -- prettierd increases prettier speed
-                "prettier", -- prettier formatter
-                "pylsp",
-                "pydocstyle", -- python doc linter
-                "pylint", -- python linter
-                "isort", -- python formatter to sort imports alphabetically
-                "black", -- python formatter
-                "mypy", -- python linter
-                "tailwindcss",
-                "tsserver",
-                "rust_analyzer",
-                "stylua", -- lua formatter
-                "clang-format", -- c/c++ formatter
-                "cpplint", -- cpp linter
-                "markdownlint", -- markdown linter
-            },
-        })
-
-        -- import lspconfig plugin
-        local lspconfig = require("lspconfig")
 
         -- [[ Configure LSP ]]
         --  This function gets run when an LSP connects to a particular buffer.
@@ -174,6 +162,19 @@ return {
         end
 
         mason_lspconfig.setup({
+            ensure_installed = {
+                "astro",
+                "bashls",
+                "clangd",
+                "cssls",
+                "html",
+                "lua_ls",
+                "eslint",
+                "pylsp",
+                "tailwindcss",
+                "tsserver",
+                "rust_analyzer",
+            },
             handlers = {
                 function(server_name) -- default lsp server
                     require("lspconfig")[server_name].setup({
