@@ -35,7 +35,8 @@
                                             "^com\\.parallels\\.winapp\\.",
                                             "^tv\\.parsec\\.www$",
                                             "^org\\.macports\\.X11$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -97,7 +98,8 @@
                                             "^net\\.kovidgoyal\\.kitty$",
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -154,7 +156,8 @@
                                             "^net\\.kovidgoyal\\.kitty$",
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -188,7 +191,8 @@
                                             "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^tv\\.parsec\\.www$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -217,7 +221,8 @@
                                             "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^tv\\.parsec\\.www$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -251,7 +256,8 @@
                                             "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^tv\\.parsec\\.www$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -280,7 +286,8 @@
                                             "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^tv\\.parsec\\.www$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -314,7 +321,8 @@
                                             "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^tv\\.parsec\\.www$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -343,7 +351,8 @@
                                             "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^tv\\.parsec\\.www$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -405,7 +414,8 @@
                                             "^net\\.kovidgoyal\\.kitty$",
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -462,7 +472,8 @@
                                             "^net\\.kovidgoyal\\.kitty$",
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -519,7 +530,8 @@
                                             "^net\\.kovidgoyal\\.kitty$",
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -585,7 +597,8 @@
                                             "^net\\.kovidgoyal\\.kitty$",
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -646,7 +659,8 @@
                                             "^net\\.kovidgoyal\\.kitty$",
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -712,7 +726,8 @@
                                             "^net\\.kovidgoyal\\.kitty$",
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -773,7 +788,8 @@
                                             "^net\\.kovidgoyal\\.kitty$",
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -835,7 +851,8 @@
                                             "^net\\.kovidgoyal\\.kitty$",
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -897,7 +914,8 @@
                                             "^net\\.kovidgoyal\\.kitty$",
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -959,7 +977,8 @@
                                             "^net\\.kovidgoyal\\.kitty$",
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -1021,7 +1040,8 @@
                                             "^net\\.kovidgoyal\\.kitty$",
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -1078,7 +1098,8 @@
                                             "^net\\.kovidgoyal\\.kitty$",
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -1140,7 +1161,8 @@
                                             "^net\\.kovidgoyal\\.kitty$",
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -1193,7 +1215,8 @@
                                             "^com\\.vmware\\.proxyApp\\.",
                                             "^com\\.parallels\\.winapp\\.",
                                             "^tv\\.parsec\\.www$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -1227,6 +1250,7 @@
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^tv\\.parsec\\.www$",
                                             "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$",
                                             "^com\\.mitchellh\\.ghostty$"
                                         ],
                                         "type": "frontmost_application_unless"
@@ -1258,6 +1282,7 @@
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^tv\\.parsec\\.www$",
                                             "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$",
                                             "^com\\.mitchellh\\.ghostty$"
                                         ],
                                         "type": "frontmost_application_unless"
@@ -1292,6 +1317,7 @@
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^tv\\.parsec\\.www$",
                                             "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$",
                                             "^com\\.mitchellh\\.ghostty$"
                                         ],
                                         "type": "frontmost_application_unless"
@@ -1329,6 +1355,7 @@
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^tv\\.parsec\\.www$",
                                             "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$",
                                             "^com\\.mitchellh\\.ghostty$"
                                         ],
                                         "type": "frontmost_application_unless"
@@ -1360,6 +1387,7 @@
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^tv\\.parsec\\.www$",
                                             "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$",
                                             "^com\\.mitchellh\\.ghostty$"
                                         ],
                                         "type": "frontmost_application_unless"
@@ -1394,6 +1422,7 @@
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^tv\\.parsec\\.www$",
                                             "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$",
                                             "^com\\.mitchellh\\.ghostty$"
                                         ],
                                         "type": "frontmost_application_unless"
@@ -1431,7 +1460,8 @@
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^tv\\.parsec\\.www$",
                                             "^com\\.mitchellh\\.ghostty$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -1468,7 +1498,8 @@
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^tv\\.parsec\\.www$",
                                             "^com\\.mitchellh\\.ghostty$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -1505,7 +1536,8 @@
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^tv\\.parsec\\.www$",
                                             "^com\\.mitchellh\\.ghostty$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -1603,7 +1635,8 @@
                                             "^net\\.kovidgoyal\\.kitty$",
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -1641,7 +1674,8 @@
                                             "^com\\.vmware\\.proxyApp\\.",
                                             "^com\\.parallels\\.winapp\\.",
                                             "^co\\.zeit\\.hyper$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -1677,7 +1711,8 @@
                                             "^com\\.vmware\\.proxyApp\\.",
                                             "^com\\.parallels\\.winapp\\.",
                                             "^co\\.zeit\\.hyper$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -1739,6 +1774,7 @@
                                             "^net\\.kovidgoyal\\.kitty$",
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$",
                                             "^com\\.mitchellh\\.ghostty$"
                                         ],
                                         "type": "frontmost_application_unless"
@@ -1796,6 +1832,7 @@
                                             "^net\\.kovidgoyal\\.kitty$",
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$",
                                             "^com\\.mitchellh\\.ghostty$"
                                         ],
                                         "type": "frontmost_application_unless"
@@ -1891,7 +1928,8 @@
                                             "^com\\.vmware\\.proxyApp\\.",
                                             "^com\\.parallels\\.winapp\\.",
                                             "^tv\\.parsec\\.www$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -1941,7 +1979,8 @@
                                             "^com\\.vmware\\.proxyApp\\.",
                                             "^com\\.parallels\\.winapp\\.",
                                             "^tv\\.parsec\\.www$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -1992,7 +2031,8 @@
                                             "^com\\.vmware\\.proxyApp\\.",
                                             "^com\\.parallels\\.winapp\\.",
                                             "^co\\.zeit\\.hyper$",
-                                            "^com\\.philandro\\.anydesk$"
+                                            "^com\\.philandro\\.anydesk$",
+                                            "^com\\.moonlight-stream\\.Moonlight$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
