@@ -5,9 +5,9 @@ default: all
 
 all: uninstall
 
-install: install-prerequisites install-prettier install-cargo install-bat install-tokei install-fdfind install-kitty install-nvim install-tmux install-tmux-tpm install-fzf install-oh-my-zsh install-powerlevel10k install-oh-my-zsh-plugins
+install: install-prerequisites install-prettier install-opencode install-cargo install-bat install-tokei install-fdfind install-kitty install-nvim install-tmux install-tmux-tpm install-fzf install-oh-my-zsh install-powerlevel10k install-oh-my-zsh-plugins
 
-install-macos: install-prerequisites-macos install-delta-brew install-prettier install-cargo install-bat install-tokei install-fdfind install-nvim-brew install-tmux-brew install-tmux-tpm install-fzf-brew install-oh-my-zsh install-powerlevel10k install-oh-my-zsh-plugins
+install-macos: install-prerequisites-macos install-delta-brew install-prettier install-opencode install-cargo install-bat install-tokei install-fdfind install-nvim-brew install-tmux-brew install-tmux-tpm install-fzf-brew install-oh-my-zsh install-powerlevel10k install-oh-my-zsh-plugins
 
 install-configs:
 	./installer.sh
@@ -22,6 +22,9 @@ install-prerequisites:
 
 install-prettier:
 	@sudo npm install -g prettier
+
+install-opencode:
+	@sudo npm install -g opencode-ai@latest
 
 install-fdfind:
 	@cargo install fd-find
