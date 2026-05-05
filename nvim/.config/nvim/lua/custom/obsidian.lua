@@ -11,7 +11,7 @@ return {
         { "<leader>oy", "<cmd>Obsidian yesterday<cr>", desc = "[O]bsidian: [y]esterday's daily note" },
         { "<leader>oT", "<cmd>Obsidian tomorrow<cr>", desc = "[O]bsidian: [T]omorrow's daily note" },
         { "<leader>oD", "<cmd>Obsidian dailies<cr>", desc = "[O]bsidian: pick from [D]ailies" },
-        { "<leader>og", "<cmd>Obsidian grep<cr>", desc = "[O]bsidian: [g]rep notes" },
+        { "<leader>og", "<cmd>Obsidian search<cr>", desc = "[O]bsidian: [g]rep notes" },
         { "<leader>op", "<cmd>Obsidian quick_switch<cr>", desc = "[O]bsidian: [q]uick switch" },
         { "<leader>ob", "<cmd>Obsidian backlinks<cr>", desc = "[O]bsidian: [b]acklinks" },
         { "<leader>ot", "<cmd>Obsidian tags<cr>", desc = "[O]bsidian: [t]ags" },
@@ -19,6 +19,7 @@ return {
         { "<leader>ol", "<cmd>Obsidian links<cr>", desc = "[O]bsidian: list [l]inks in note" },
         { "<leader>ow", "<cmd>Obsidian workspace<cr>", desc = "[O]bsidian: switch [w]orkspace" },
         { "<leader>oi", "<cmd>Obsidian template<cr>", desc = "[O]bsidian: [i]nsert template" },
+        { "<leader>of", "<cmd>Obsidian follow_link<cr>", desc = "[O]bsidian [f]ollow link" },
     },
     dependencies = {
         "nvim-lua/plenary.nvim",
@@ -57,13 +58,6 @@ return {
             template = "Daily Note Template",
         },
 
-        -- nvim-cmp completion (the obsidian source is registered for markdown
-        -- buffers in the config function below).
-        completion = {
-            nvim_cmp = true,
-            min_chars = 2,
-        },
-
         attachments = {
             folder = "Attachments",
         },
@@ -71,21 +65,6 @@ return {
     config = function(_, opts)
         require("obsidian").setup(opts)
 
-        -- Wire the obsidian completion sources into nvim-cmp for markdown
-        -- buffers only, so they don't pollute completion elsewhere.
-        local ok, cmp = pcall(require, "cmp")
-        if ok then
-            cmp.setup.filetype("markdown", {
-                sources = cmp.config.sources({
-                    { name = "obsidian" },
-                    { name = "obsidian_new" },
-                    { name = "obsidian_tags" },
-                    { name = "nvim_lsp" },
-                    { name = "luasnip" },
-                    { name = "buffer" },
-                    { name = "path" },
-                }),
-            })
-        end
+        vim.opt.conceallevel = 2
     end,
 }
