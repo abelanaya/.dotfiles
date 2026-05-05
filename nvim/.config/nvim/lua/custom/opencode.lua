@@ -1,5 +1,6 @@
 return {
     "NickvanDyke/opencode.nvim",
+    version = "*",
     dependencies = {
         -- Recommended for `ask()` and `select()`.
         -- Required for `toggle()`.
@@ -65,19 +66,19 @@ return {
             opencode.toggle()
         end, { desc = "[A][I] Toggle" })
 
-        vim.keymap.set({ "n", "x" }, "<leader>op", function()
+        vim.keymap.set({ "n", "x" }, "<leader>oP", function()
             opencode.prompt("@this")
         end, { desc = "[O]pencode [p]aste this" })
 
-        vim.keymap.set("n", "<leader>oc", function()
+        vim.keymap.set("n", "<leader>oC", function()
             opencode.command()
         end, { desc = "[O]pencode [c]ommand" })
 
-        vim.keymap.set("n", "<leader>on", function()
+        vim.keymap.set("n", "<leader>oN", function()
             opencode.command("session_new")
         end, { desc = "[O]pencode [n]ew session" })
 
-        vim.keymap.set("n", "<leader>oi", function()
+        vim.keymap.set("n", "<leader>oI", function()
             opencode.command("session_interrupt")
         end, { desc = "[O]pencode [i]nterrupt session" })
 
