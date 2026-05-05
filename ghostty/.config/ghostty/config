@@ -34,3 +34,4 @@ keybind = alt+j=text:\x1b\x6a
 keybind = alt+k=text:\x1b\x6b
 keybind = alt+l=text:\x1b\x6c
 keybind = alt+v=text:\x1b\x76
+keybind = alt+u=text:\x1b\x75
