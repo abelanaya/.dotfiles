@@ -49,3 +49,8 @@ fi
 function fdf {
     fzf --preview="bat --color=always {}"
 }
+
+# Automatically load and unload variables when you cd to folders with .envrc file. For example .envrc file with layout
+# python3 will auto create a venv for that folder that is only active while you are on that folder
+eval "$(direnv hook zsh)"
+
