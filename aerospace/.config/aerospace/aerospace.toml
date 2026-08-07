@@ -9,7 +9,10 @@ after-login-command = []
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = ['exec-and-forget sketchybar']
+after-startup-command = [
+    'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0',
+    'exec-and-forget sketchybar'
+]
 
 # Notify SketchyBar when workspace changes
 exec-on-workspace-change = ['/bin/bash', '-c', '/opt/homebrew/opt/sketchybar/bin/sketchybar --trigger aerospace_workspace_change AEROSPACE_FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE AEROSPACE_PREV_WORKSPACE=$AEROSPACE_PREV_WORKSPACE',]
@@ -156,6 +159,8 @@ automatically-unhide-macos-hidden-apps = false
         'focus-monitor next --wrap-around'
     ]
 
+    cmd-backspace = ['close-all-windows-but-current', 'mode main']
+
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     cmd-period = 'mode service'
 
@@ -164,7 +169,6 @@ automatically-unhide-macos-hidden-apps = false
 [mode.service.binding]
     r = ['reload-config', 'mode main']
     f = ['flatten-workspace-tree', 'mode main'] # reset layout
-    backspace = ['close-all-windows-but-current', 'mode main']
 
     # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
     #s = ['layout sticky tiling', 'mode main']
