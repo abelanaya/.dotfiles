@@ -1,0 +1,4 @@
+*.log
+session.json
+sessions/
+plugins/github/
