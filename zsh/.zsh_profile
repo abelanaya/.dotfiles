@@ -8,6 +8,7 @@ alias ll='ls -lAFhrt'
 alias li='ls -lAFhrti'
 alias l='ls -lAFhrtn'
 alias v='nvim'
+alias npm='pnpm'
 
 # Source Cargo env if it exists
 [[ -f $HOME/.cargo/env ]] && source $HOME/.cargo/env
@@ -39,7 +40,7 @@ fi
 eval "$(gh copilot alias -- zsh)"
 
 if [[ -z $STOW_FOLDERS ]]; then
-    export STOW_FOLDERS="git,i3,nvim,tmux,zsh,rofi,kitty,dunst,scripts,polybar,Xresources,Gtkrc,fonts,neofetch,prettier,ghostty,karabiner,aerospace"
+    export STOW_FOLDERS="git,i3,nvim,tmux,zsh,rofi,kitty,dunst,scripts,polybar,Xresources,Gtkrc,fonts,neofetch,prettier,ghostty,karabiner,aerospace,herdr"
 fi
 
 if [[ -z $DOTFILES ]]; then
