@@ -40,7 +40,9 @@ default-root-container-orientation = 'auto'
 # Fallback value (if you omit the key): on-focused-monitor-changed = []
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
-on-focus-changed = ['move-mouse window-lazy-center']
+# Added workaround for ghost windows in aersopace from https://github.com/nikitabobko/AeroSpace/issues/1615. Remove
+# workaround when a definitive fix is live with a newer release
+on-focus-changed = ['exec-and-forget ~/.local/scripts/aerospace-kill-ghosts.sh', 'move-mouse window-lazy-center']
 
 # You can effectively turn off macOS "Hide application" (cmd-h) feature by toggling this flag
 # Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-cmd-h key
