@@ -36,8 +36,8 @@ return {
 
         workspaces = {
             {
-                name = "Abel Vault",
-                path = "~/Dropbox/Apps/remotely-save/Abel Vault",
+                name = "Obsivault",
+                path = "~/obsivault",
             },
         },
 
@@ -52,7 +52,7 @@ return {
 
         -- Daily notes
         daily_notes = {
-            folder = "Notes/Dailies",
+            folder = "Dailies",
             date_format = "%Y-%m-%d",
             alias_format = "%B %-d, %Y",
             template = "Daily Note Template",
