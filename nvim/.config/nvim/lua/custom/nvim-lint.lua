@@ -17,7 +17,6 @@ return {
             javascriptreact = { "standardjs" },
             typescriptreact = { "standardjs" },
             python = { "pylint", "pydocstyle", "mypy" },
-            markdown = { "markdownlint" },
         }
 
         local binary_name = "standard"
