@@ -8,6 +8,7 @@ alias ll='ls -lAFhrt'
 alias li='ls -lAFhrti'
 alias l='ls -lAFhrtn'
 alias v='nvim'
+alias vim='nvim'
 alias npm='pnpm'
 
 # Source Cargo env if it exists
@@ -23,7 +24,8 @@ source <(fzf --zsh)
 # Configure Bat
 export BAT_THEME=TwoDark
 
-export GIT_EDITOR=vim
+export EDITOR=nvim
+export GIT_EDITOR=nvim
 
 # Path config
 export PATH=$PATH:$HOME/.local/bin:$HOME/.local/scripts
