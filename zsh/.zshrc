@@ -81,6 +81,10 @@ plugins=(git web-search zsh-autosuggestions zsh-syntax-highlighting zsh-you-shou
 
 source $ZSH/oh-my-zsh.sh
 
+if (( $+commands[herdr] )); then
+  source <(herdr completion zsh)
+fi
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
