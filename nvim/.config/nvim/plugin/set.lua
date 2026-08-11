@@ -131,7 +131,7 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     callback = function(args)
         local name = vim.fn.fnamemodify(args.file, ":t")
-        if name:match("^herdr%-scrollback%-.*%.txt$") then
+        if name:match("^herdr%-scrollback%-.*%.txt$") or name:match("^tmux%-pane%..+$") then
             vim.bo.filetype = "sh"
         end
     end,
