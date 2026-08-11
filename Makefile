@@ -5,9 +5,9 @@ default: all
 
 all: uninstall
 
-install: install-prerequisites install-prettier install-opencode install-cargo install-bat install-tokei install-fdfind install-kitty install-nvim install-tmux install-tmux-tpm install-fzf install-oh-my-zsh install-powerlevel10k install-oh-my-zsh-plugins
+install: install-prerequisites install-prettier install-opencode install-cargo install-bat install-tokei install-fdfind install-kitty install-nvim install-tmux install-tmux-tpm install-fzf install-oh-my-zsh install-powerlevel10k install-oh-my-zsh-plugins install-herdr
 
-install-macos: install-prerequisites-macos install-delta-brew install-prettier install-opencode install-cargo install-bat install-tokei install-fdfind install-nvim-brew install-tmux-brew install-tmux-tpm install-fzf-brew install-oh-my-zsh install-powerlevel10k install-oh-my-zsh-plugins
+install-macos: install-prerequisites-macos install-delta-brew install-prettier install-opencode install-cargo install-bat install-tokei install-fdfind install-nvim-brew install-tmux-brew install-tmux-tpm install-fzf-brew install-oh-my-zsh install-powerlevel10k install-oh-my-zsh-plugins install-herdr
 
 install-configs:
 	./installer.sh
@@ -26,7 +26,11 @@ install-prettier:
 	@sudo npm install -g prettier
 
 install-opencode:
-	@sudo npm install -g opencode-ai@latest
+	@curl -fsSL https://opencode.ai/install | bash
+
+install-herdr:
+	@curl -fsSL https://herdr.dev/install.sh | sh
+	@herdr plugin install natori-hrj/herdr-lazy --yes
 
 install-fdfind:
 	@cargo install fd-find
