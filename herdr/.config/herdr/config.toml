@@ -68,9 +68,9 @@ detach = "prefix+d"
 # workspace_picker = "prefix+w"
 # goto = "prefix+g"
 # new_workspace = "prefix+shift+n"
-# new_worktree = "prefix+shift+g"
+new_worktree = ""
 # open_worktree = ""    # optional, unset by default
-# remove_worktree = ""  # optional, unset by default; opens confirmation
+remove_worktree = "prefix+shift+k"
 # rename_workspace = "prefix+shift+w"
 # close_workspace = "prefix+shift+d"
 # previous_workspace = "" # optional, unset by default
@@ -209,8 +209,8 @@ command = "herdr-splits.resize-right"
 # workspaces = "" # e.g. "ctrl+shift" makes ctrl+shift+1..9 switch workspaces directly
 # agents = ""     # e.g. "alt" makes alt+1..9 focus agent rows directly
 
-# [worktrees]
-# directory = "~/.herdr/worktrees"
+[worktrees]
+directory = "~/projects/worktrees"
 
 [ui]
 # Sidebar width (auto-scaled based on workspace names, this sets the default)
