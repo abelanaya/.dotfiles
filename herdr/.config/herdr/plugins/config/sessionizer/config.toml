@@ -1,6 +1,6 @@
 [projects]
 # Parent folders searched by the interactive pickers
-roots = ["~/Projects", "~/Workspace", "~/"]
+roots = ["~/projects", "~/"]
 # true: only git repos; false: all immediate child folders
 git_only = true
 # Only used when git_only = true; 1 means immediate children
@@ -9,36 +9,52 @@ depth = 1
 [ui]
 # How Sessionizer / Worktree pickers open in Herdr: overlay | split | popup
 # popup requires Herdr >= 0.7.4 (width/height only apply to popup)
-placement = "overlay"
+placement = "popup"
 
 [layout]
 # Which pane or tab to focus after layout creation
 focus = "editor"
 
 [tabs.dev]
-label = "dev"
+label = "1 nvim"
 
 [[tabs.dev.panes]]
 id = "editor"
 title = "nvim"
 command = "nvim"
 
-[[tabs.dev.panes]]
+[tabs.agent]
+label = "2 opencode"
+
+[[tabs.agent.panes]]
 id = "agent"
-# Split this pane from the earlier pane with id = "editor"
-from = "editor"
-title = "agent"
-# Split direction for the new pane: right or down
-split = "right"
-# Optional: ratio controls the new pane's share of the split axis (0 < ratio < 1)
-ratio = 0.3
+title = "opencode"
 command = "opencode"
 
-[[tabs.dev.panes]]
-id = "git"
-# Split this pane from the earlier pane with id = "editor"
-from = "editor"
+[tabs.git]
+label = "3 lazygit"
+
+[[tabs.git.panes]]
+id = "lazygit"
 title = "lazygit"
-# Split direction for the new pane: right or down
-split = "down"
 command = "lazygit"
+
+[tabs.terminal]
+label = "4 terminal"
+
+[[tabs.terminal.panes]]
+id = "terminal"
+title = "terminal"
+
+[tabs.server]
+label = "5 server & logs"
+
+[[tabs.server.panes]]
+id = "server 1"
+title = "server 1"
+
+[[tabs.server.panes]]
+id = "server 2"
+from = "server 1"
+split = "right"
+title = "server 2"
