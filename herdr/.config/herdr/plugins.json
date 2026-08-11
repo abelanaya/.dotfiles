@@ -1,5 +1,240 @@
 [
   {
+    "plugin_id": "herdr-lazy",
+    "name": "herdr-lazy",
+    "version": "0.28.0",
+    "min_herdr_version": "0.7.5",
+    "description": "Be lazy: a curated, batteries-included plugin distro & manager for herdr",
+    "manifest_path": "/Users/abelanaya/.dotfiles/herdr/.config/herdr/plugins/github/herdr-lazy-7e53bfc3c6d3/herdr-plugin.toml",
+    "plugin_root": "/Users/abelanaya/.dotfiles/herdr/.config/herdr/plugins/github/herdr-lazy-7e53bfc3c6d3",
+    "enabled": true,
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "build": [
+      {
+        "platforms": [
+          "linux",
+          "macos"
+        ],
+        "command": [
+          "/bin/sh",
+          "scripts/fetch-or-build.sh"
+        ]
+      },
+      {
+        "platforms": [
+          "windows"
+        ],
+        "command": [
+          "cargo",
+          "build",
+          "--release"
+        ]
+      }
+    ],
+    "startup": [
+      {
+        "platforms": [
+          "linux",
+          "macos"
+        ],
+        "command": [
+          "./target/release/herdr-lazy",
+          "startup"
+        ]
+      },
+      {
+        "platforms": [
+          "windows"
+        ],
+        "command": [
+          "powershell",
+          "-NoProfile",
+          "-ExecutionPolicy",
+          "Bypass",
+          "-Command",
+          "& .\\target\\release\\herdr-lazy.exe startup"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "init",
+        "title": "Lazy: install curated defaults",
+        "contexts": [
+          "workspace"
+        ],
+        "platforms": [
+          "linux",
+          "macos"
+        ],
+        "command": [
+          "./target/release/herdr-lazy",
+          "init"
+        ]
+      },
+      {
+        "id": "init-windows",
+        "title": "Lazy: install curated defaults",
+        "contexts": [
+          "workspace"
+        ],
+        "platforms": [
+          "windows"
+        ],
+        "command": [
+          "powershell",
+          "-NoProfile",
+          "-ExecutionPolicy",
+          "Bypass",
+          "-Command",
+          "& .\\target\\release\\herdr-lazy.exe init"
+        ]
+      },
+      {
+        "id": "manage",
+        "title": "Lazy: open manage pane",
+        "contexts": [
+          "workspace"
+        ],
+        "platforms": [
+          "linux",
+          "macos"
+        ],
+        "command": [
+          "/bin/sh",
+          "scripts/open-manage-pane.sh"
+        ]
+      },
+      {
+        "id": "manage-windows",
+        "title": "Lazy: open manage pane",
+        "contexts": [
+          "workspace"
+        ],
+        "platforms": [
+          "windows"
+        ],
+        "command": [
+          "powershell",
+          "-NoProfile",
+          "-ExecutionPolicy",
+          "Bypass",
+          "-Command",
+          "$b = $env:HERDR_BIN_PATH; if (-not $b) { $b = 'herdr' }; & $b plugin pane open --plugin herdr-lazy --entrypoint manage-windows --focus"
+        ]
+      },
+      {
+        "id": "probe",
+        "title": "Lazy: probe CLI bridge",
+        "contexts": [
+          "workspace"
+        ],
+        "platforms": [
+          "linux",
+          "macos"
+        ],
+        "command": [
+          "./target/release/herdr-lazy",
+          "probe"
+        ]
+      },
+      {
+        "id": "probe-windows",
+        "title": "Lazy: probe CLI bridge",
+        "contexts": [
+          "workspace"
+        ],
+        "platforms": [
+          "windows"
+        ],
+        "command": [
+          "powershell",
+          "-NoProfile",
+          "-ExecutionPolicy",
+          "Bypass",
+          "-Command",
+          "& .\\target\\release\\herdr-lazy.exe probe"
+        ]
+      },
+      {
+        "id": "sync",
+        "title": "Lazy: sync plugins to bundle",
+        "contexts": [
+          "workspace"
+        ],
+        "platforms": [
+          "linux",
+          "macos"
+        ],
+        "command": [
+          "./target/release/herdr-lazy",
+          "sync"
+        ]
+      },
+      {
+        "id": "sync-windows",
+        "title": "Lazy: sync plugins to bundle",
+        "contexts": [
+          "workspace"
+        ],
+        "platforms": [
+          "windows"
+        ],
+        "command": [
+          "powershell",
+          "-NoProfile",
+          "-ExecutionPolicy",
+          "Bypass",
+          "-Command",
+          "& .\\target\\release\\herdr-lazy.exe sync"
+        ]
+      }
+    ],
+    "panes": [
+      {
+        "id": "manage",
+        "title": "herdr-lazy",
+        "platforms": [
+          "linux",
+          "macos"
+        ],
+        "placement": "overlay",
+        "command": [
+          "./target/release/herdr-lazy",
+          "ui"
+        ]
+      },
+      {
+        "id": "manage-windows",
+        "title": "herdr-lazy",
+        "platforms": [
+          "windows"
+        ],
+        "placement": "overlay",
+        "command": [
+          "powershell",
+          "-NoProfile",
+          "-ExecutionPolicy",
+          "Bypass",
+          "-Command",
+          "& .\\target\\release\\herdr-lazy.exe ui"
+        ]
+      }
+    ],
+    "source": {
+      "kind": "github",
+      "owner": "natori-hrj",
+      "repo": "herdr-lazy",
+      "resolved_commit": "6c756ca4f0176fc42955d2e5faff88a2b810c1d7",
+      "managed_path": "/Users/abelanaya/.config/herdr/plugins/github/herdr-lazy-7e53bfc3c6d3",
+      "installed_unix_ms": 1786478071555
+    }
+  },
+  {
     "plugin_id": "herdr-splits",
     "name": "Herdr Splits",
     "version": "0.5.2",

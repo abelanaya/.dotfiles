@@ -77,7 +77,7 @@ detach = "prefix+d"
 # next_workspace = ""     # optional, unset by default
 # previous_agent = ""     # optional, unset by default
 # next_agent = ""         # optional, unset by default
-# focus_agent = ""        # optional indexed binding, e.g. "prefix+alt+1..9"
+focus_agent = "prefix+alt+1..9"        # optional indexed binding, e.g. "prefix+alt+1..9"
 # remote_image_paste = "ctrl+v" # only active in herdr --remote; empty disables raw-key image paste
 new_tab = "prefix+t"
 # rename_tab = "prefix+shift+t"
@@ -120,12 +120,24 @@ zoom = "prefix+m"       # legacy alias: fullscreen
 # On Windows, command strings run through cmd.exe /d /c.
 
 [[keys.command]]
+key = "prefix+shift+u"
+type = "plugin_action"
+command = "herdr-lazy.manage"
+description = "manage plugins"
+
+[[keys.command]]
 key = "prefix+y"
 type = "popup"
 command = "exec \"${SHELL:-sh}\""
 description = "open scratch terminal"
 width = "80%"
 height = "80%"
+
+[[keys.command]]
+key = "prefix+shift+l"
+type = "shell"
+command = "\"$HERDR_BIN_PATH\" pane run \"$HERDR_ACTIVE_PANE_ID\" reset"
+description = "Reset current pane"
 
 [[keys.command]]
 key = "prefix+f"
