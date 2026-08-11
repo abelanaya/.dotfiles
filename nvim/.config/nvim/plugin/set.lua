@@ -128,6 +128,15 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     end,
 })
 
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+    callback = function(args)
+        local name = vim.fn.fnamemodify(args.file, ":t")
+        if name:match("^herdr%-scrollback%-.*%.txt$") then
+            vim.bo.filetype = "sh"
+        end
+    end,
+})
+
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
