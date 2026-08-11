@@ -5,7 +5,7 @@ default: all
 
 all: uninstall
 
-install: install-prerequisites install-prettier install-opencode install-cargo install-bat install-tokei install-fdfind install-kitty install-nvim install-tmux install-tmux-tpm install-fzf install-oh-my-zsh install-powerlevel10k install-oh-my-zsh-plugins
+install: install-prerequisites install-prettier install-opencode install-cargo install-bat install-tokei install-fdfind install-kitty install-nvim install-tmux install-tmux-tpm install-fzf-brew install-oh-my-zsh install-powerlevel10k install-oh-my-zsh-plugins
 
 install-macos: install-prerequisites-macos install-delta-brew install-prettier install-opencode install-cargo install-bat install-tokei install-fdfind install-nvim-brew install-tmux-brew install-tmux-tpm install-fzf-brew install-oh-my-zsh install-powerlevel10k install-oh-my-zsh-plugins
 
@@ -15,11 +15,12 @@ install-configs:
 install-prerequisites-macos:
 	brew tap FelixKratz/formulae
 	brew trust FelixKratz/formulae
-	brew install libtool pkg-config automake ripgrep python3 xclip npm nmap dnsmap gucharmap tree stow wget ninja cmake gettext curl gh zoxide tldr borders btop pdfgrep magicmark/tap/spacelist lazygit lazydocker maccy
+	brew install libtool pkg-config automake ripgrep python3 xclip npm nmap dnsmap gucharmap tree stow wget ninja cmake gettext curl gh zoxide tldr borders btop pdfgrep magicmark/tap/spacelist lazygit lazydocker maccy direnv thefuck gh
 	brew install --cask raycast ghostty scroll-reverser karabiner-elements productdevbook/tap/portkiller
 
 install-prerequisites:
 	@sudo apt-get install -y autotools-dev cmake automake bear zsh ripgrep xclip python3 pip flameshot curl npm fuse pavucontrol net-tools network-manager network-manager-gnome xbacklight arandr gucharmap pulseaudio-utils tree stow
+	@brew install direnv thefuck gh
 	@pip3 install virtualenv
 
 install-prettier:
