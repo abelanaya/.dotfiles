@@ -35,9 +35,6 @@ if [[ -z xinput ]]; then
     xinput set-prop "ELAN06FA:00 04F3:31AD Touchpad" "libinput Natural Scrolling Enabled" 1
 fi
 
-# Functions
-eval "$(gh copilot alias -- zsh)"
-
 if [[ -z $STOW_FOLDERS ]]; then
     export STOW_FOLDERS="git,i3,nvim,tmux,zsh,rofi,kitty,dunst,scripts,polybar,Xresources,Gtkrc,fonts,neofetch,prettier,ghostty,karabiner,aerospace,herdr,agents"
 fi
