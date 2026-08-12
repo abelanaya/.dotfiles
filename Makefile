@@ -20,7 +20,7 @@ install-prerequisites-macos:
 
 install-prerequisites:
 	@sudo apt-get install -y autotools-dev cmake automake bear zsh ripgrep xclip python3 pip flameshot curl npm fuse pavucontrol net-tools network-manager network-manager-gnome xbacklight arandr gucharmap pulseaudio-utils tree stow
-	@brew install direnv thefuck gh eza
+	@brew install zoxide direnv thefuck gh eza
 	@pip3 install virtualenv
 
 install-prettier:
