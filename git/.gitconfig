@@ -8,6 +8,8 @@
 [credential "https://github.com"]
     helper =
     helper = !/usr/bin/gh auth git-credential
+[pull]
+    rebase = true # Rebase (instead of merge) on pull
 [core]
     pager = delta
     editor = nvim
@@ -25,8 +27,19 @@
 [merge]
     conflictstyle = diff3
 [diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
     submodule = log
     colorMoved = default
+[commit]
+    verbose = true
+[column]
+    ui = auto
+[branch]
+    sort = -committerdate
+[tag]
+    sort = -version:refname
 [pager]
     blame  = delta
     diff   = delta
