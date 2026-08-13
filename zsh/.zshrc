@@ -132,39 +132,18 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
 # bun completions
 [ -s "/Users/abelanaya/.bun/_bun" ] && source "/Users/abelanaya/.bun/_bun"
 
-#compdef opencode
-###-begin-opencode-completions-###
-#
-# yargs command completion script
-#
-# Installation: opencode completion >> ~/.zshrc
-#    or opencode completion >> ~/.zprofile on OSX.
-#
-_opencode_yargs_completions()
-{
-  local reply
-  local si=$IFS
-  IFS=$'
-' reply=($(COMP_CWORD="$((CURRENT-1))" COMP_LINE="$BUFFER" COMP_POINT="$CURSOR" opencode --get-yargs-completions "${words[@]}"))
-  IFS=$si
-  if [[ ${#reply} -gt 0 ]]; then
-    _describe 'values' reply
-  else
-    _default
-  fi
-}
-if [[ "'${zsh_eval_context[-1]}" == "loadautofunc" ]]; then
-  _opencode_yargs_completions "$@"
-else
-  compdef _opencode_yargs_completions opencode
-fi
-###-end-opencode-completions-###
+# opencode completions
+eval "$(opencode completion zsh)"
 
 # Homebrew installation
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
+[ -s "/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh" ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
+
+# Zoxide setup
+eval "$(zoxide init zsh)"
