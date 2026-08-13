@@ -4,9 +4,47 @@ VIM="nvim"
 #PERSONAL=$XDG_CONFIG_HOME/personal
 
 # Personal alias
-alias ll='ls -lAFhrt'
-alias li='ls -lAFhrti'
-alias l='ls -lAFhrtn'
+# Old ls
+# alias ll='ls -lAFhrt'
+# alias li='ls -lAFhrti'
+# alias l='ls -lAFhrtn'
+
+# Eza (better ls)
+alias ll='eza -lgAhF --group-directories-first --icons=auto -s modified'
+alias li='ll -i'
+alias ln='ll -n'
+
+# Editor & fzf
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
+alias eff='$EDITOR "$(ff)"'
+
+sff() {
+    if [ "$#" -eq 0 ]; then
+        echo "Usage: sff <destination> (e.g. sff host:/tmp/)"
+        return 1
+    fi
+
+    local file
+
+    file=$(
+        find . -type f -exec stat -f '%m %N' {} + |
+            sort -rn |
+            cut -d' ' -f2- |
+            ff
+        ) || return 1
+
+        [ -n "$file" ] || return 1
+
+        scp "$file" "$1"
+    }
+
+# open feature macos like
+if command -v xdg-open &>/dev/null; then
+    open() (
+        xdg-open "$@" >/dev/null 2>&1 &
+    )
+fi
+
 alias v='nvim'
 alias vim='nvim'
 alias npm='pnpm'
