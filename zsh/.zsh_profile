@@ -15,6 +15,7 @@ alias xclip='clipcopy'
 alias ll='eza -lgAhF --group-directories-first --icons=auto -s modified'
 alias li='ll -i'
 alias ln='ll -n'
+alias lt='eza -lAhF --tree --level=2 --long --icons --git'
 
 # Git worktree
 gwti() {
