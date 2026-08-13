@@ -13,14 +13,15 @@ install-configs:
 	./installer.sh
 
 install-prerequisites-macos:
-	brew tap FelixKratz/formulae
+	brew tap FelixKratz/formulae satococoa/tap
 	brew trust FelixKratz/formulae
-	brew install libtool pkg-config automake ripgrep python3 xclip npm nmap dnsmap gucharmap tree stow wget ninja cmake gettext curl gh zoxide tldr borders btop pdfgrep magicmark/tap/spacelist lazygit lazydocker maccy direnv thefuck gh eza
+	brew install libtool pkg-config automake ripgrep python3 xclip npm nmap dnsmap gucharmap tree stow wget ninja cmake gettext curl gh zoxide tldr borders btop pdfgrep magicmark/tap/spacelist lazygit lazydocker maccy direnv thefuck gh eza satococoa/tap/git-worktreeinclude
 	brew install --cask raycast ghostty scroll-reverser karabiner-elements productdevbook/tap/portkiller
 
 install-prerequisites:
 	@sudo apt-get install -y autotools-dev cmake automake bear zsh ripgrep xclip python3 pip flameshot curl npm fuse pavucontrol net-tools network-manager network-manager-gnome xbacklight arandr gucharmap pulseaudio-utils tree stow
-	@brew install zoxide direnv thefuck gh eza
+	@brew tap satococoa/tap
+	@brew install zoxide direnv thefuck gh eza satococoa/tap/git-worktreeinclude
 	@pip3 install virtualenv
 
 install-prettier:
