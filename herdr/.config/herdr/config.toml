@@ -260,7 +260,7 @@ directory = "~/projects/worktrees"
 # mouse_scroll_lines = 3
 
 # Ask for confirmation before closing a workspace
-# confirm_close = true
+confirm_close = false
 
 # Ask for a tab name before creating a new tab.
 # Set false to create tabs immediately with generated names.
