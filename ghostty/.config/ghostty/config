@@ -12,6 +12,7 @@ font-size = 14
 window-inherit-font-size = false
 mouse-hide-while-typing = true
 quit-after-last-window-closed = true
+confirm-close-surface=false
 
 # Bind ALT + d to delete forward word
 keybind = alt+d=text:\x1b\x64
@@ -22,6 +23,10 @@ keybind = global:cmd+ñ=toggle_quick_terminal
 # Bind COMMAND + left/right to move cursor by word. This is remapped to CTRL + left/right in karabiner-elements
 keybind = command+left=text:\x1b\x5b\x31\x3b\x35\x44
 keybind = command+right=text:\x1b\x5b\x31\x3b\x35\x43
+
+# Keyboard bindings
+keybind = shift+insert=paste_from_clipboard
+keybind = control+insert=copy_to_clipboard
 
 # Bind ALT + some letters to allow keybinds of ALT in nvim work
 keybind = alt+q=text:\x1b\x71
