@@ -45,3 +45,6 @@
     diff   = delta
     reflog = delta
     show   = delta
+[rerere]
+	enabled = true           # Record and reuse conflict resolutions
+	autoupdate = true        # Apply stored conflict resolutions automatically
