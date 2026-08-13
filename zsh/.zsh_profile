@@ -4,6 +4,8 @@ VIM="nvim"
 #PERSONAL=$XDG_CONFIG_HOME/personal
 
 # Personal alias
+alias xclip='clipcopy'
+
 # Old ls
 # alias ll='ls -lAFhrt'
 # alias li='ls -lAFhrti'
@@ -13,6 +15,47 @@ VIM="nvim"
 alias ll='eza -lgAhF --group-directories-first --icons=auto -s modified'
 alias li='ll -i'
 alias ln='ll -n'
+
+# Git worktree
+gwti() {
+  if (( $# < 1 )); then
+    echo "Usage: gwti <worktree-name> [-- <additional-arguments>]"
+    return 1
+  fi
+
+  local worktree_name="$1"
+  shift
+
+  if (( $# > 0 )); then
+    if [[ "$1" != "--" ]]; then
+      echo "Usage: gwti <worktree-name> [-- <additional-arguments>]"
+      return 1
+    fi
+    shift
+  fi
+
+  local directory="$PWD"
+  local repository_root=""
+
+  while true; do
+    if [[ -e "$directory/.git" ]]; then
+      repository_root="$directory"
+    fi
+
+    [[ "$directory" == "/" ]] && break
+    directory="${directory:h}"
+  done
+
+  if [[ -z "$repository_root" ]]; then
+    echo "Error: not inside a git repository"
+    return 1
+  fi
+
+  local repository_name="${repository_root:t}"
+  local worktree_path="$HOME/projects/worktrees/$repository_name/$worktree_name"
+
+  git -C "$worktree_path" worktreeinclude apply --json "$@"
+}
 
 # Editor & fzf
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
