@@ -17,6 +17,9 @@ alias li='ll -i'
 alias ln='ll -n'
 alias lt='eza -lAhF --tree --level=2 --long --icons --git'
 
+# Show git untracked + git ignored files
+alias glsi='git status --short --untracked-files=all --ignored'
+
 # Git worktree
 gwti() {
   if (( $# < 1 )); then
