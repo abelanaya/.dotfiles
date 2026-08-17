@@ -36,6 +36,7 @@
     verbose = true # Show git diff in commit editor (not to commit to repo just check changes to write message)
 [column]
     ui = auto
+    status = plain
 [branch]
     sort = -committerdate
 [tag]
