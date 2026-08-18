@@ -1,3 +1,6 @@
+# Homebrew installation
+[ -s "/home/linuxbrew/.linuxbrew/bin/brew" ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -138,9 +141,6 @@ esac
 
 # opencode completions
 eval "$(opencode completion zsh)"
-
-# Homebrew installation
-[ -s "/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh" ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
