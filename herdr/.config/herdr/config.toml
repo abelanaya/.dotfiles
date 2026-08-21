@@ -80,6 +80,7 @@ remove_worktree = "prefix+shift+k"
 focus_agent = "prefix+alt+1..9"        # optional indexed binding, e.g. "prefix+alt+1..9"
 # remote_image_paste = "ctrl+v" # only active in herdr --remote; empty disables raw-key image paste
 new_tab = "prefix+t"
+sync_panes = "prefix+x"
 # rename_tab = "prefix+shift+t"
 # previous_tab = "prefix+p"
 # next_tab = "prefix+n"
