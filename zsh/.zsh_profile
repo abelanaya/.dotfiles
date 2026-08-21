@@ -17,6 +17,8 @@ alias li='ll -i'
 alias ln='ll -n'
 alias lt='eza -lAhF --tree --level=2 --long --icons --git'
 
+alias oc='opencode'
+
 # Show git untracked + git ignored files
 alias glsi='git status --short --untracked-files=all --ignored'
 
@@ -157,3 +159,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # opencode
 export PATH=~/.opencode/bin:$PATH
+
+# go
+export PATH=~/go/bin:$PATH
