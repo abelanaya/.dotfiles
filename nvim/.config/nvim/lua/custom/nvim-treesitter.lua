@@ -34,6 +34,7 @@ return {
             "markdown",
             "markdown_inline",
             "dockerfile",
+            "make",
             "gitignore",
             "bash",
             "query",
