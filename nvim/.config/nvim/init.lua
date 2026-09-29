@@ -4,6 +4,12 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Disable unused remote-plugin providers (node/perl/ruby/python) to silence checkhealth warnings
+vim.g.loaded_node_provider = 0
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_ruby_provider = 0
+vim.g.loaded_python3_provider = 0
+
 -- Set termguicolors for better colors in nvim
 vim.o.termguicolors = true
 

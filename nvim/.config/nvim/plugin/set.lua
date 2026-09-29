@@ -153,5 +153,19 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 -- Set color scheme
 vim.cmd("colorscheme onedark_vivid")
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
+-- Clear bg (keep the theme's fg) for a transparent background.
+-- nvim_set_hl resets unspecified attributes, so fg must be carried over,
+-- otherwise plugins blending colors (e.g. snacks) error on a nil fg.
+local function transparent_hl(name)
+    local hl = vim.api.nvim_get_hl(0, { name = name })
+    if hl.rm_default then
+        hl = vim.api.nvim_get_hl(0, { name = name, link = false })
+    end
+    hl.bg = "none"
+    hl.ctermbg = "none"
+    vim.api.nvim_set_hl(0, name, hl)
+end
+
+transparent_hl("Normal")
+transparent_hl("NormalFloat")

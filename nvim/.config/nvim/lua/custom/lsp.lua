@@ -47,8 +47,8 @@ return {
         -- [[ Configure LSP ]]
         --  This function gets run when an LSP connects to a particular buffer.
         local on_attach = function(client, bufnr)
-            -- Disable TSServer formatting
-            if client.name == "tsserver" then
+            -- Disable TS server formatting (renamed tsserver -> ts_ls in lspconfig)
+            if client.name == "ts_ls" or client.name == "tsserver" then
                 client.server_capabilities.documentFormattingProvider = false
             end
 
@@ -172,7 +172,7 @@ return {
                 "eslint",
                 "pylsp",
                 "tailwindcss",
-                "tsserver",
+                "ts_ls",
                 "rust_analyzer",
             },
             handlers = {

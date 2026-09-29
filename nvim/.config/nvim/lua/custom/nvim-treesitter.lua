@@ -1,66 +1,64 @@
 return {
     -- Highlight, edit, and navigate code
     "nvim-treesitter/nvim-treesitter",
-    event = { "BufReadPre", "BufNewFile" },
+    branch = "main",
+    lazy = false, -- the main branch does not support lazy-loading
+    build = ":TSUpdate",
     dependencies = {
         "nvim-treesitter/nvim-treesitter-textobjects",
         "nvim-treesitter/nvim-treesitter-context",
-        "nvim-treesitter/playground",
     },
-    build = ":TSUpdate",
     config = function()
-        local treesitter = require("nvim-treesitter.configs")
         local treesitter_context = require("treesitter-context")
 
         treesitter_context.setup({
-            enable = true,
             max_lines = 5,
             multiline_threshold = 1,
             separator = "-",
             trim_scope = "inner",
         })
 
-        treesitter.setup({
-            -- Add languages to be installed here that you want installed for treesitter
-            ensure_installed = {
-                "c",
-                "cpp",
-                "go",
-                "lua",
-                "python",
-                "rust",
-                "tsx",
-                "javascript",
-                "typescript",
-                "vimdoc",
-                "vim",
-                "markdown",
-                "markdown_inline",
-                "dockerfile",
-                "gitignore",
-                "bash",
-                "query",
-                "yaml",
-                "xml",
-                "html",
-                "json",
-                "css",
-            },
+        -- Parsers are installed via `install`, no `ensure_installed`/`auto_install` anymore.
+        local parsers = {
+            "c",
+            "cpp",
+            "go",
+            "lua",
+            "python",
+            "rust",
+            "tsx",
+            "javascript",
+            "typescript",
+            "vimdoc",
+            "vim",
+            "markdown",
+            "markdown_inline",
+            "dockerfile",
+            "gitignore",
+            "bash",
+            "query",
+            "yaml",
+            "xml",
+            "html",
+            "json",
+            "css",
+        }
+        require("nvim-treesitter").install(parsers)
 
-            -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
-            auto_install = true,
+        -- Highlighting is provided by Neovim itself now; enable it per filetype.
+        vim.api.nvim_create_autocmd("FileType", {
+            pattern = { "*" },
+            callback = function()
+                pcall(vim.treesitter.start)
+            end,
+        })
 
-            highlight = { enable = true },
-            indent = { enable = true },
-            incremental_selection = {
-                enable = true,
-                keymaps = {
-                    init_selection = "<c-space>",
-                    node_incremental = "<c-space>",
-                    scope_incremental = "<c-s>",
-                    node_decremental = "<M-v>",
-                },
-            },
+        -- Treesitter indentation (experimental on the main branch).
+        vim.api.nvim_create_autocmd("FileType", {
+            pattern = { "*" },
+            callback = function()
+                vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+            end,
         })
     end,
 }

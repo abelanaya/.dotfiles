@@ -29,6 +29,7 @@ return {
     opts = {
 
         legacy_commands = false,
+        ui = { enable = false }, -- render-markdown.nvim handles the UI instead
 
         -- Where new notes go: "current_dir" | "notes_subdir"
         new_notes_location = "notes_subdir",
